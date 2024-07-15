@@ -85,7 +85,7 @@ export const StyledBodyCenter = styled.div`
 
     display: grid;
     text-align: center;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     align-items: center;
     list-style-type: none;
     width: 80%;
@@ -108,14 +108,13 @@ export const List = styled.li`
     padding-left: 1rem;
     border-right: 1px solid red;
     background-color: brown;
+    padding: 1rem;
   
   input {
     height: 2rem;
     width: 2rem;
     accent-color: #e5771f;
     font-size: 3rem;
-    text-decoration: ${({packingStatus}) => packingStatus && 'line-through'};
-    color: ${({packingStatus}) => packingStatus && 'orange'};
   }
 
   span{

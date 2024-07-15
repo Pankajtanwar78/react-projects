@@ -5,18 +5,22 @@ const TravelListBodyCenter = ({travelList, onToggle, onDelete}) => {
 
 
   return (
-    <StyledBodyCenter totalItems={travelList.length}>
+    <StyledBodyCenter $totalItems={travelList.length}>
       <ul>
-        {travelList.map((item,index) => (
+        {travelList.map((item,index) => {
+          return (
           <List key={item.id} packingStatus={item.packed}>
             <input type='checkbox' 
-              value={item.packed}
-              onChange={() => {onToggle(item.id)}}
+              checked={item.packed}
+              onChange={() => {
+                console.log(item.id)
+                onToggle(item.id)}}
               />  
-            <span>{item.quantity} {item.itemDescription}</span>
+            <span>{item.itemDescription} --  {item.quantity}</span>
+
             <button onClick={() => {onDelete(item.id)}}>❌</button>
           </List>
-        ))}
+        )})}
       </ul>
     </StyledBodyCenter>
   );

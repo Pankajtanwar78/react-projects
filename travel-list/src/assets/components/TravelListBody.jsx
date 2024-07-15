@@ -26,7 +26,7 @@ const TravelListBody = ({
       .slice()
       .sort((a, b) => Number(a.packed) - Number(b.packed));
 
-
+  console.log(sortedTravelList)
 
   const handleSortBy = (sortValue) => {
     setSortBy(sortValue)
