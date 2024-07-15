@@ -5,6 +5,7 @@ import TravelListBody from './TravelListBody';
 import TravelListFooter from './TravelListFooter';
 import { StyledContainer } from './styles/TravelList.styles';
 
+
 const TravelList = () => {
 
   const [travelList, setTravelList] = useState([])
